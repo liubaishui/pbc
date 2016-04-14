@@ -8,7 +8,7 @@ TARGET = protobuf.so
 all : $(TARGET)
 
 $(TARGET) : pbc-lua.c
-	$(CC) $(CFLAGS) -shared -o $@ -I../.. -I$(LUADIR) -L../../build $^ -lpbc
+	$(CC) $(CFLAGS) -dynamiclib -Wl,-undefined,dynamic_lookup -o $@ -I../.. -I$(LUADIR) -L../../build $^ -lpbc
 
 clean :
 	rm -f $(TARGET)

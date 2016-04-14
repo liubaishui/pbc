@@ -8,3 +8,4 @@ Release
 build
 .DS_Store
 xcuserdata
+protobuf.so
